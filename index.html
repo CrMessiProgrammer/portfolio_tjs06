@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Portfólio">
+    <meta name="author" content="Carlos Henrique">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="icon" href="./assets/img/favicon.svg"/>
+    <title>Portfólio do Carlos</title>
+</head>
+<body>
+    <!-- Cabeçalho da Página -->
+    <header>
+        <div id="header_content">
+
+            <!-- Título do Cabeçalho -->
+            <div id="titulo">
+                <!-- O '#' faz o link jogar para a tela inicial do site -->
+                <a href="#">Universo</a>
+            </div>
+
+            <!-- Menu -->
+            <div id="menu">
+                <nav>
+                    <!-- Marcadores não Ordenados -->
+                     <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contate-me</a></li>
+                     </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Seção Principal da Página -->
+    <main>
+
+        <section id="home">
+
+            <article id="home_texto">
+
+                <h4>Bem vindo ao Novo Universo</h4>
+                <h1>Mundos diferentes para pessoas diferentes</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores odio rerum possimus ipsa earum ullam dolorum laboriosam voluptatum totam inventore esse atque non magni necessitatibus quaerat optio, ea enim corrupti!</p>
+                <a href="https://github.com/CrMessiProgrammer" target="_blank">Explorar</a>
+                
+            </article>
+
+            <article id="home_imagem">
+
+                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado">   
+
+            </article>
+            
+        </section>
+
+        <section id="about">
+
+            <img src="./assets/img/user_01.svg" alt="Foto do Perfil do GitHub">
+
+            <article id="about_texto">
+
+                <h1>Sobre mim</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi porro excepturi, fuga cupiditate adipisci corporis eos, nulla nobis placeat amet necessitatibus perspiciatis doloribus mollitia voluptatem magni quod ad commodi id.</p>
+
+                <div id="about_github">
+
+                    <a href="https://github.com/CrMessiProgrammer" target="_blank">GitHub</a>
+
+                <p>200 Seguidores</p>
+                <p>20 Repositórios</p>
+                </div>
+                
+            </article>
+            
+        </section>
+
+        <section id="contact">
+
+            <h4>Contate-me</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur excepturi dolorem amet sit nemo veritatis iusto unde obcaecati illum perspiciatis corporis, voluptatibus quam animi, labore alias itaque mollitia! Minima, aperiam.</p>
+
+            <div id="icones_redes_sociais">
+
+                <a href="www.linkedin.com/in/carlos-h-dev" target="_blank">
+                    <img src="./assets/img/linkedin.svg" alt="Logo do LinkedIn">
+                </a>
+                <a href="https://github.com/CrMessiProgrammer" target="_blank">
+                    <img src="./assets/img/github.svg" alt="Logo do GitHub">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./assets/img/instagram.svg" alt="Logo do Instagram">
+                </a>
+
+            </div>
+
+            <form action="" method="post">
+
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" name="nome" placeholder="Digite o seu nome">
+                <span id="txtNome"></span>
+
+                <label for="email">E-mail</label>
+                <input id="email" type="text" name="email" placeholder="Digite o endereço do seu e-mail">
+                <span id="txtEmail"></span>
+
+                <label for="assunto">Assunto</label>
+                <input id="assunto" type="text" name="assunto" placeholder="Digite o assunto da mensagem">
+                <span id="txtAssunto"></span>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            
+        </section>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer>
+        Feito com 🧡 por Carlos Henrique Nunes - 2025
+    </footer>
+</body>
+</html>
