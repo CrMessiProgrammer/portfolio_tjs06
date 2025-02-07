@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Criando variáveis */
+:root{
+    --purple-200: #9a7bd1;
+    --purple-500: #6b36c8;
+    --purple-800: #441f88;
+ 
+    --gray-200: #cccccc;
+    --gray-400: #505861;
+ 
+    --black-800: #171717;
+ 
+    --white: #F9F9F9;
+}
+
+html{
+    width: 100%;
+    height: 100vh;  /* Ocupa todo espaço disponível view port (mudar de acordo com o dispositivo - desktop, mobile, tablet*/
+    scroll-behavior: smooth;    /* Rolagem da tela*/
+}
+
+body{
+    background-color: var(--gray-200);
+    color: var(--black-800);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button, a{
+    cursor: pointer;    /* Muda o Cursor */
+}
+
+.botao{
+    text-align: center;
+    padding: 12px 32px;
+    background: none;
+    border: 1px solid var(--purple-800);
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* Quando passar o mouse por cima mudar características */
+.botao:hover{
+    background-color: var(--purple-800);
+    color: var(--white);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Estilização - Seção Header */
+
+.menu_container{
+    height: 80px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--purple-800);
+    border-bottom: 1px solid var(--purple-500);
+    filter: opacity(0.9);   /* Deixa um pouco transparente*/
+}
+
+.menu_container a{
+    color: var(--white);
+    font-weight: 700;
+}
+
+.menu_container a:hover{
+    color: var(--purple-200);
+}
+
+.menu_content{
+    max-width: 1120px;
+    padding: 0 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_list{
+    list-style: none;
+    text-align: center;
+}
+
+.menu_list li{
+    margin-left: 1rem;
+}
+
+
+/* Estilização - Seção Home */
+
+.home_container{
+    max-width: 1120px;
+    margin: 16px auto;
+    padding: 0 1rem;
+    height: calc(100vh - 100px); /* Deixará visivel na tela somente oo home, para não mostrar os outros 'about' (ajustando a altura do elemento 'home'*/
+}
+
+.home_container p, h1, h4{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.home_container h1{
+    font-size: 2.25rem;
+    line-height: 3rem; /* Altura da linha*/
+    font-weight: 700;
+}
+
+.home_container h4{
+    font-weight: 700;
+}
+
+.home_container p{
+    margin: 1rem 0;
+}
+
+.home_container .botao{
+    width: 40%;
+}
+
+.home_content{
+    width: 50vw;
+    flex-direction: column;
+}
+
+.home_content img{
+    display: flex;
+    width: 75%;
+}
