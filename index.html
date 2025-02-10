@@ -22,25 +22,26 @@
     <title>Portfólio do Carlos</title>
 </head>
 <body>
+
     <!-- Cabeçalho da Página -->
     <header class="flex menu_container">
+        
         <div id="header_content" class="menu_content">
 
             <!-- Título do Cabeçalho -->
             <div id="titulo">
-                <!-- O '#' faz o link jogar para a tela inicial do site -->
                 <a href="#">Universo</a>
             </div>
 
             <!-- Menu -->
             <div id="menu" class="flex">
                 <nav>
-                    <!-- Marcadores não Ordenados -->
-                     <ul class="flex menu_list">
+                    <!-- Marcadores não Ordenados para criar as opções do menu -->
+                    <ul class="flex menu_list">
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">Sobre</a></li>
-                        <li><a href="#contact">Contate-me</a></li>
-                     </ul>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -50,66 +51,80 @@
     <!-- Seção Principal da Página -->
     <main>
 
+        <!-- Seção home -->
         <section id="home" class="flex home_container">
 
+            <!-- Texto da Seção Home -->
             <article id="home_texto" class="flex home_content">
 
-                <h4>Bem vindo ao Novo Universo</h4>
+                <h4>Bem-vindo ao Novo Universo</h4>
                 <h1>Mundos diferentes para pessoas diferentes</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores odio rerum possimus ipsa earum ullam dolorum laboriosam voluptatum totam inventore esse atque non magni necessitatibus quaerat optio, ea enim corrupti!</p>
-                <a href="https://github.com/CrMessiProgrammer" target="_blank" class="botao">Explorar</a>
-                
-            </article>
-
-            <article id="home_imagem" class="home_content">
-
-                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado">   
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam ipsum eum sapiente maiores adipisci
+                    aperiam sint dignissimos molestias voluptas expedita doloribus consequatur saepe maxime, tempore
+                    modi eligendi, eius, eos itaque.</p>
+                <a href="https://github.com/CrMessiProgrammer" target="_blank" class="botao">
+                    Explorar
+                </a>
 
             </article>
-            
+
+            <!-- Imagem da Seção Home -->
+            <article id="home_imagem" class="flex home_content">
+                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado">
+            </article>
+
         </section>
 
-        <section id="about">
+        <!-- Seção sobre -->
+        <section id="about" class="flex sobre_container">
 
-            <img src="./assets/img/user_01.svg" alt="Foto do Perfil do GitHub">
+            <!-- Imagem da Seção Sobre -->
+            <img src="./assets/img/IMG_1886.JPG" alt="Foto do Perfil do Github">
 
+            <!-- Texto da Seção Sobre -->
             <article id="about_texto">
+                <h2>Sobre mim</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil magni doloremque sint, qui facere
+                    fugit sequi optio molestiae sunt! Maiores sapiente atque nulla mollitia earum delectus nostrum natus
+                    architecto?</p>
 
-                <h1>Sobre mim</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi porro excepturi, fuga cupiditate adipisci corporis eos, nulla nobis placeat amet necessitatibus perspiciatis doloribus mollitia voluptatem magni quod ad commodi id.</p>
-
-                <div id="about_github">
-
-                    <a href="https://github.com/CrMessiProgrammer" target="_blank" class="botao">GitHub</a>
-
-                <p>200 Seguidores</p>
-                <p>20 Repositórios</p>
+                <!-- Detalhes do Github -->
+                <div id="about_github" class="flex sobre_github">
+                    <a href="https://github.com/CrMessiProgrammer" target="_blank" class="botao">
+                        Github
+                    </a>
+                    <p>200 Seguidores</p>
+                    <p>20 Repositórios</p>
                 </div>
-                
+
             </article>
-            
         </section>
 
+        <!-- Seção de Contato -->
         <section id="contact">
 
-            <h4>Contate-me</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur excepturi dolorem amet sit nemo veritatis iusto unde obcaecati illum perspiciatis corporis, voluptatibus quam animi, labore alias itaque mollitia! Minima, aperiam.</p>
+            <article id="redes_sociais">
+                <h4>Contate-me</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum quae voluptas error omnis,
+                    deleniti molestiae dolores earum incidunt sint minus magni sunt maiores minima, cumque quam numquam
+                    officia obcaecati perspiciatis.</p>
 
-            <div id="icones_redes_sociais">
+                <!-- Redes Sociais -->
+                <div id="icones_redes_sociais" >
+                    <a href="https://www.linkedin.com/in/carlos-henrique-nunes-234005190/" target="_blank">
+                        <img src="./assets/img/linkedin.svg" alt="Logo do LinkedIn">
+                    </a>
+                    <a href="https://github.com/CrMessiProgrammer" target="_blank">
+                        <img src="./assets/img/github.svg" alt="Logo do Github">
+                    </a>
+                    <a href="" target="_blank">
+                        <img src="./assets/img/instagram.svg" alt="Logo do Instagram">
+                    </a>
+                </div>
+            </article>
 
-                <a href="www.linkedin.com/in/carlos-h-dev" target="_blank">
-                    <img src="./assets/img/linkedin.svg" alt="Logo do LinkedIn">
-                </a>
-                <a href="https://github.com/CrMessiProgrammer" target="_blank">
-                    <img src="./assets/img/github.svg" alt="Logo do GitHub">
-                </a>
-                <a href="" target="_blank">
-                    <img src="./assets/img/instagram.svg" alt="Logo do Instagram">
-                </a>
-
-            </div>
-
-            <form action="" method="post">
+            <!-- Formulário de Contato -->
+            <form action="" method="POST">
 
                 <label for="nome">Nome</label>
                 <input id="nome" type="text" name="nome" placeholder="Digite o seu nome">
@@ -124,12 +139,14 @@
                 <span id="txtAssunto"></span>
 
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem"></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem">
+                </textarea>
 
                 <button type="submit">Enviar</button>
             </form>
-            
+
         </section>
+
     </main>
 
     <!-- Rodapé da Página -->

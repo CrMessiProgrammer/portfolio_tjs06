@@ -54,6 +54,14 @@ button, a{
     color: var(--white);
 }
 
+.botao_sucess{
+    margin: auto;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .flex{
     display: flex;
     justify-content: center;
@@ -61,7 +69,7 @@ button, a{
 }
 
 
-/* Estilização - Seção Header */
+/* Estilização - Seção Header (cabeçalho) */
 
 .menu_container{
     height: 80px;
@@ -140,4 +148,96 @@ button, a{
 .home_content img{
     display: flex;
     width: 75%;
+}
+
+.sucess_container{
+    max-width: 1120px;
+    margin: auto;
+    text-align: center;
+    padding: 0 1rem;
+    height: calc(100vh - 200px); /* Deixará visivel na tela somente oo home, para não mostrar os outros 'about' (ajustando a altura do elemento 'home'*/
+}
+
+.sucess_container h2{
+    font-size:xx-large;
+    font-weight: 700;
+}
+
+.sucess_container h3{
+    margin: 0 0 2vh 0;
+}
+
+
+/* Estilização da Seção Home - Página Sucess */
+
+.home_container_sucess {
+    height: calc(100vh - 12.5rem);
+    max-width: 1120px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+#home_sucess {
+    width: 50vw;
+    flex-direction: column;
+}
+
+#home_sucess h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#home_sucess h4 {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+
+/* Estilização da Seção Sobre */
+
+.sobre_container {
+    max-width: 1120px;
+    margin: -1.25rem auto;
+    padding: 0 1rem;
+    height: 100vh;
+}
+
+.sobre_container img {
+    width: 30%;
+    margin: 1rem;
+    border: 5px solid var(--purple-500);
+    border-radius: 50%;
+}
+
+.sobre_container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.sobre_container p {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.sobre_github {
+    justify-content: space-evenly;
+}
+
+#sobre_texto {
+    margin-left: 2rem;
+}
+
+
+/* Estilização da Seção Footer */
+
+footer {
+    margin: 0;
+    padding: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--purple-500);
+    filter: opacity(0.9);
 }
