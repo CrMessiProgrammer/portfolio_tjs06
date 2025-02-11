@@ -177,6 +177,10 @@ button, a{
     padding: 0 1rem;
 }
 
+.menu_content_sucess{
+    margin: auto;
+}
+
 #home_sucess {
     width: 50vw;
     flex-direction: column;
@@ -185,6 +189,10 @@ button, a{
 #home_sucess h1 {
     font-size: 2rem;
     font-weight: 700;
+}
+
+#home_sucess h2{
+    font-size: 4rem;
 }
 
 #home_sucess h4 {
@@ -230,7 +238,101 @@ button, a{
 }
 
 
-/* Estilização da Seção Footer */
+/* Estilização da Seção ... */
+
+.contato_container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 1120px;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.contato_container h4{
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contato_content{
+    flex-direction: column;
+    margin: 4rem 0 0 0;
+    font-size: 1.25rem;
+}
+
+.contato_content p{
+    display: block;
+    text-align: justify;
+}
+
+
+/* Estilização da Seção Redes Sociais */
+
+.social_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0 0 0;
+}
+
+.social_icon{
+    width: 4.75rem;
+    height: 4.75rem;
+}
+
+.social_icon:hover{
+    /* O filter é usado apenas para imagens em ".svg" */
+    filter: brightness(0)
+            saturate(100%)
+            invert(20%)
+            sepia(24%)
+            saturate(4557%)
+            hue-rotate(242deg)
+            brightness(89%)
+            contrast(108%);
+}
+
+
+/* Estilização da Seção Form (formulário) */
+
+form{
+    display: flex;
+    flex-direction: column; /* Configura um abaixo do outro */
+    margin: 7rem 0 0 0;
+    padding: 1.25rem;
+    border: none;
+}
+
+form label{
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+form input, textarea{
+    width: 100%;
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+}
+
+textarea{
+    resize: none;
+}
+
+form span{
+    margin-bottom: 0.5rem;
+    margin-left: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: red;
+}
+
+
+/* Estilização da Seção Footer (rodapé) */
 
 footer {
     margin: 0;
@@ -240,4 +342,155 @@ footer {
     color: var(--white);
     background-color: var(--purple-500);
     filter: opacity(0.9);
+}
+
+
+/* Modo Responsivo */
+
+/* Smartphone - Telas até 480px */
+
+@media screen and (max-width: 480px){
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main{
+        display: flex;
+        flex: 1; /* Vai ocupar 100% do espaço */
+        flex-direction: column;
+    }
+
+    footer{
+        margin-top: auto; /* Vai deixar o rodapé sempre lá no final */
+    }
+
+    /* Ajustes na Seção Menu */
+
+    .menu_container{
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .menu_content{
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    #titulo a{
+        font-size: 1.75rem;
+    }
+
+    .menu_list{
+        display: none;  /* Tira o menu (home,  */
+    }
+
+    /* Ajustes na Seção Home */
+
+    .home_container{
+        flex-direction: column-reverse; /* Configura em coluna (colocando a img acima e texto abaixo) */
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .home_content{
+        width: 100%;
+    }
+
+    .home_content h1{
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .home_content .botao{
+        width: 80%;
+    }
+
+    .home_content img{
+        width: 80%;
+    }
+
+    #home_texto{
+        margin-top: 0.5rem;
+    }
+
+    #home_imagem{
+        margin-bottom: 0;
+    }
+
+    /* Ajustes na Seção About (sobre) */
+
+    .sobre_container{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 3rem;
+    }
+
+    .sobre_container img{
+        width: 70%;
+    }
+
+    .sobre_container h1{
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .sobre_github{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .sobre_github p{
+        display: none;  /* Tira as informações extras (seguidores e repositórios) */
+    }
+
+    .sobre_github .botao{
+        width: 80%;
+    }
+
+    /* Ajustes na Seção Contato */
+
+    .contato_container{
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .contato_content{
+        width: 100%;
+    }
+
+    .contato_content h4{
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .contato_content p{
+        margin: 1rem;
+    }
+
+    /* Ajustes na Seção Redes Sociais */
+
+    .social_container{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .social_icon{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* Ajustes na Seção Form (formulário) */
+
+    form{
+        margin: 1rem 0 0 0;
+        padding: 1rem;
+    }
 }
