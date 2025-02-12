@@ -10,12 +10,12 @@
 
 /* Criando variáveis */
 :root{
-    --purple-200: #9a7bd1;
-    --purple-500: #6b36c8;
-    --purple-800: #441f88;
+    --purple-200: #474973;
+    --purple-500: #161b33;
+    --purple-800: #0d0c1d;
  
-    --gray-200: #cccccc;
-    --gray-400: #505861;
+    --gray-200: #f1dac4;
+    --gray-400: #a69cac;
  
     --black-800: #171717;
  
@@ -41,8 +41,9 @@ button, a{
 
 .botao{
     text-align: center;
+    background-color: var(--purple-800);
+    color: var(--white);
     padding: 12px 32px;
-    background: none;
     border: 1px solid var(--purple-800);
     border-radius: 10px;
     font-weight: 700;
@@ -50,8 +51,8 @@ button, a{
 
 /* Quando passar o mouse por cima mudar características */
 .botao:hover{
-    background-color: var(--purple-800);
-    color: var(--white);
+    color: var(--purple-500);
+    background: var(--white);
 }
 
 .botao_sucess{
@@ -87,7 +88,7 @@ button, a{
 }
 
 .menu_container a:hover{
-    color: var(--purple-200);
+    color: var(--gray-400);
 }
 
 .menu_content{
@@ -283,15 +284,15 @@ button, a{
 }
 
 .social_icon:hover{
-    /* O filter é usado apenas para imagens em ".svg" */
+    /* O filter é usado apenas para imagens em ".svg" (site usado para gerar esse filtro - https://angel-rs.github.io/css-color-filter-generator/) */
     filter: brightness(0)
             saturate(100%)
-            invert(20%)
-            sepia(24%)
-            saturate(4557%)
-            hue-rotate(242deg)
-            brightness(89%)
-            contrast(108%);
+            invert(64%)
+            sepia(10%)
+            saturate(4798%)
+            hue-rotate(26deg)
+            brightness(99%)
+            contrast(63%);
 }
 
 
@@ -326,7 +327,7 @@ textarea{
 form span{
     margin-bottom: 0.5rem;
     margin-left: 0.75rem;
-    font-size: 0.75rem;
+    font-size: 0.80rem;
     line-height: 1.25rem;
     color: red;
 }

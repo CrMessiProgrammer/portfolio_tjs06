@@ -40,6 +40,7 @@
                     <ul class="flex menu_list">
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">Sobre</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
@@ -70,7 +71,7 @@
 
             <!-- Imagem da Seção Home -->
             <article id="home_imagem" class="flex home_content">
-                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado">
+                <img src="./assets/img/img_home.svg" alt="Capacete de Astronauta Animado">
             </article>
 
         </section>
@@ -78,30 +79,7 @@
         <!-- Seção sobre -->
         <section id="about" class="flex sobre_container">
 
-            <!-- Imagem da Seção Sobre -->
-            <img src="./assets/img/foto_perfil.JPG" alt="Foto do Perfil do Github">
-
-            <!-- Texto da Seção Sobre -->
-            <article id="about_texto">
-                <h2>Sobre mim</h2>
-                <p>Olá, meu nome é Carlos Henrique Nunes, sou formado em Engenharia de Computação e estou me especializando em Desenvolvimento de Software.
-
-                    Meu interesse pela tecnologia começou cedo e, ao longo dessa minha trajetória, fiz cursos técnicos, conquistei certificações (sendo uma delas da CISCO) e desenvolvi projetos em Java voltados para impacto social.
-                    
-                    Já atuei em Suporte e Infraestrutura, onde aprimorei soft skills essenciais.
-                    
-                    Atualmente, participo do Bootcamp da Generation, focado em Desenvolvimento Full Stack JavaScript. Convido você a conhecer meus projetos no GitHub através do link abaixo. Obrigado!😊</p>
-
-                <!-- Detalhes do Github -->
-                <div id="about_github" class="flex sobre_github">
-                    <a href="https://github.com/CrMessiProgrammer" target="_blank" class="botao">
-                        Github
-                    </a>
-                    <p>200 Seguidores</p>
-                    <p>20 Repositórios</p>
-                </div>
-
-            </article>
+            
         </section>
 
         <!-- Seção de Contato -->
@@ -109,7 +87,7 @@
 
             <article id="redes_sociais" class="contato_content">
                 <h4>Quer conversar?📩</h4>
-                <p>Se você quiser trocar ideias, tirar dúvidas ou falar sobre oportunidades, estou à disposição! Sinta-se à vontade para me chamar por e-mail ou pelas redes sociais. Será um prazer conectar com você!</p>
+                <p>Se quiser trocar ideias, esclarecer dúvidas ou conversar sobre oportunidades, estou à disposição! Sinta-se à vontade para entrar em contato por e-mail (usando o formulário ao lado) ou pelas redes sociais (nos links abaixo). Será um prazer me conectar com você!</p>
 
                 <!-- Redes Sociais -->
                 <div id="icones_redes_sociais" class="social_container">
@@ -126,8 +104,12 @@
             </article>
 
             <!-- Formulário de Contato -->
-            <form action="" method="POST">
+            <form  action="https://formsubmit.co/1f3627265043d7457656d69faf7f0931" method="POST" id="formulario">
 
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/sucess.html">
+
+                <!-- 'Captcha' 'false' desabilita aquela verificação de robô -->
+                <input type="hidden" name="_captcha" value="false">
                 <label for="nome">Nome</label>
                 <input id="nome" type="text" name="nome" placeholder="Digite o seu nome">
                 <span id="txtNome"></span>
@@ -154,5 +136,8 @@
     <footer>
         Feito com 🧡 por Carlos Henrique Nunes - 2025
     </footer>
+
+    <!-- Script JavaScript -->
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
