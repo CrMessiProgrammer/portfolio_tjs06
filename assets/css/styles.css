@@ -281,18 +281,20 @@ button, a{
 .social_icon{
     width: 4.75rem;
     height: 4.75rem;
+    transition: transform 0.3s ease;
 }
 
 .social_icon:hover{
     /* O filter é usado apenas para imagens em ".svg" (site usado para gerar esse filtro - https://angel-rs.github.io/css-color-filter-generator/) */
     filter: brightness(0)
             saturate(100%)
-            invert(64%)
-            sepia(10%)
-            saturate(4798%)
-            hue-rotate(26deg)
-            brightness(99%)
-            contrast(63%);
+            invert(44%)
+            sepia(4%)
+            saturate(1621%)
+            hue-rotate(314deg)
+            brightness(104%)
+            contrast(93%);
+    transform: scale(1.1);
 }
 
 
