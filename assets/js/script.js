@@ -21,13 +21,17 @@ async function getApiGithub() {
             <!-- Texto da Seção Sobre -->
             <article id="about_texto">
                 <h2>Sobre mim</h2>
-                <p>Olá, meu nome é Carlos Henrique Nunes, sou formado em Engenharia de Computação e estou me especializando em Desenvolvimento de Software.
+                <p style="text-align: left;">Olá, sou o Carlos Henrique Nunes, formado em Engenharia de Computação e atualmente focado na especialização no Desenvolvimento de Software.<br>
 
-                    Meu interesse pela tecnologia começou cedo e, ao longo dessa minha trajetória, fiz cursos técnicos, conquistei certificações (sendo uma delas da CISCO) e desenvolvi projetos em Java voltados para impacto social.
-                    
-                    Já atuei em Suporte e Infraestrutura, onde aprimorei soft skills essenciais.
-                    
-                    Atualmente, participo do Bootcamp da Generation, focado em Desenvolvimento Full Stack JavaScript. Convido você a conhecer meus projetos no GitHub através do link abaixo. Obrigado!😊</p>
+                Minha paixão por tecnologia começou cedo, vendo meu pai consertar computadores. Esse interesse me levou ao CEAP, onde fiz meus primeiros cursos e me formei em Redes de Computadores, conquistando o certificado CISCO — um marco na minha trajetória.<br>
+
+                Na faculdade, descobri minha vocação: criar soluções com impacto social, unindo Java, Android, Arduino, Firebase e MySQL para promover acessibilidade.<br>
+
+                Na minha primeira experiência profissional como Jovem Aprendiz na Orion Integração, atuei com Suporte e Infraestrutura e aprimorei minha comunicação e gestão de tempo.<br>
+
+                Tenho investido continuamente em capacitações, eventos e cursos. Recentemente, me formei no Bootcamp da Generation em Desenvolvimento Fullstack - JavaScript, com foco em tecnologias como TypeScript, Node.js, NestJS, ReactJS, SQL (MySQL, PostgreSQL).<br>
+
+                Busco criar soluções que gerem impacto real na vida das pessoas. Neste portfólio, compartilho meus projetos e experiências. Fique à vontade para entrar em contato — será um prazer trocar ideias! Obrigado!😊</p>
 
                 <!-- Detalhes do Github -->
                 <div id="about_github" class="flex sobre_github">
