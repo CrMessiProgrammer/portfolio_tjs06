@@ -52,6 +52,18 @@ async function getApiGithub() {
     }    
 }
 
+function filterProjects(categoria) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        const tipo = card.getAttribute('data-categoria');
+        if (categoria === 'todos' || tipo === categoria) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
 formulario.addEventListener("submit", function(event){
     //Impede que o formulário seja automaticamente enviado (fará primeiro as validações)
     event.preventDefault();

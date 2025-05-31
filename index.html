@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +20,10 @@
 
     <title>Portfólio do Carlos</title>
 </head>
-<body>
 
+<body>
     <!-- Cabeçalho da Página -->
-    <header class="flex menu_container">
-        
+    <header class="flex menu_container">        
         <div id="header_content" class="menu_content">
 
             <!-- Título do Cabeçalho -->
@@ -38,23 +36,21 @@
                 <nav>
                     <!-- Marcadores não Ordenados para criar as opções do menu -->
                     <ul class="flex menu_list">
-                        <li><a href="#">Home</a></li>
                         <li><a href="#about">Sobre</a></li>
-                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">Projetos</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-
     </header>
 
     <!-- Seção Principal da Página -->
     <main>
-
         <!-- Seção home -->
         <section id="home" class="flex home_container">
-
+            
             <!-- Texto da Seção Home -->
             <article id="home_texto" class="flex home_content">
 
@@ -73,32 +69,61 @@
             <article id="home_imagem" class="flex home_content">
                 <img src="./assets/img/img_home.svg" alt="Capacete de Astronauta Animado">
             </article>
-
         </section>
 
         <!-- Seção sobre -->
         <section id="about" class="flex sobre_container">
 
-            
+        </section>
+
+        <!-- Seção Projetos -->
+        <section id="projects" class="projects_container">
+            <h2>Projetos</h2>
+            <div class="filtros">
+                <button onclick="filterProjects('todos')">Todos</button>
+                <button onclick="filterProjects('web')">Aplicativos Web</button>
+                <button onclick="filterProjects('mobile')">Aplicativos Mobile</button>
+            </div>
+
+            <div class="cards">
+                <div class="card" data-categoria="web">
+                    <img src="teste.png" alt="Projeto Teste" />
+                    <h3>Projeto Teste</h3>
+                    <p>Aplicativo de fretes para leilões</p>
+                    <div class="tecnologias">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="card" data-categoria="mobile">
+                    <img src="app-clima.png" alt="App Clima" />
+                    <h3>App Clima</h3>
+                    <p>Consulta de clima em tempo real</p>
+                    <div class="tecnologias">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+
+            <!-- Adicionar mais cards aqui -->
+            </div>
         </section>
 
         <!-- Seção de Contato -->
         <section id="contact" class="contato_container">
-
             <article id="redes_sociais" class="contato_content">
-                <h4>Vamos conversar?📩</h4>
-                <p>Se quiser trocar ideias, esclarecer dúvidas ou conversar sobre oportunidades, estou à disposição! Sinta-se à vontade para entrar em contato por e-mail (usando o formulário ao lado) ou pelas redes sociais (nos links abaixo). Será um prazer me conectar com você!</p>
+                <h4>Entre em Contato</h4>
+                <p>Se quiser compartilhar ideias, esclarecer dúvidas ou conversar sobre oportunidades, estou à disposição! Sinta-se à vontade para entrar em contato por e-mail (usando o formulário ao lado) ou pelas redes sociais (nos links abaixo). Será um prazer me conectar com você!</p>
 
                 <!-- Redes Sociais -->
                 <div id="icones_redes_sociais" class="social_container">
                     <a href="https://www.linkedin.com/in/carlos-henrique-nunes-234005190/" target="_blank">
-                        <img src="./assets/img/linkedin.svg" alt="Logo do LinkedIn" class="social_icon">
+                        <img src="./assets/img/icons8-linkedin (2).svg" alt="Logo do LinkedIn" class="social_icon">
                     </a>
                     <a href="https://github.com/CrMessiProgrammer" target="_blank">
-                        <img src="./assets/img/github.svg" alt="Logo do Github" class="social_icon">
+                        <img src="./assets/img/icons8-github (2).svg" alt="Logo do Github" class="social_icon">
                     </a>
                     <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRmVPLXftcMgVCtzcskxvpkWNRPNlLGFKwLLcjrFFmgvGMFbpHptnCpgSLRXmlggflgcvPL" target="_blank">
-                        <img src="./assets/img/gmail.svg" alt="Logo do Gmail" class="social_icon">
+                        <img src="./assets/img/icons8-gmail.svg" alt="Logo do Gmail" class="social_icon">
                     </a>
                 </div>
             </article>
@@ -126,14 +151,12 @@
 
                 <button type="submit" class="botao">Enviar</button>
             </form>
-
         </section>
-
     </main>
 
     <!-- Rodapé da Página -->
     <footer>
-        Feito com 🧡 por Carlos Henrique Nunes - 2025
+        Feito com 🚗 por Carlos Henrique Nunes - 2025
     </footer>
 
     <!-- Script JavaScript -->
