@@ -264,7 +264,7 @@ button, a{
 .track {
     display: flex;
     width: max-content;
-    animation: scroll 40s linear infinite;
+    animation: scroll 60s linear infinite;
 }
 
 .track img {
