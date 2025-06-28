@@ -1,3 +1,37 @@
+/* Seção Home (Texto rotativo) */
+
+const words = ["Hello World!", "Olá, Mundo!", "Bem-vindo ao meu portfólio!", "Meu nome é Carlos Henrique Nunes👋"];
+const typingElement = document.getElementById("typing-text");
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+    const currentWord = words[wordIndex];
+    let displayedText = currentWord.substring(0, charIndex);
+    typingElement.textContent = displayedText;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(type, 120); // velocidade da digitação
+    } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(type, 50); // velocidade do apagamento
+    } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+        wordIndex = (wordIndex + 1) % words.length;
+        }
+        setTimeout(type, 1000); // tempo de pausa
+    }
+}
+
+type();
+
+
+/* Seção Sobre (Texto + Import do Perfil do GitHub) */
+
 const sobre = document.querySelector("#about");
 const formulario = document.querySelector("#formulario");
 // Padrão de validação de e-mail
@@ -52,17 +86,33 @@ async function getApiGithub() {
     }    
 }
 
-function filterProjects(categoria) {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        const tipo = card.getAttribute('data-categoria');
-        if (categoria === 'todos' || tipo === categoria) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
+
+/* Seção Projetos (Filtragem dos botões) */
+
+const botoes = document.querySelectorAll(".filtros button");
+const cards = document.querySelectorAll(".card");
+
+botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+        document.querySelector(".filtros .ativo").classList.remove("ativo");
+        botao.classList.add("ativo");
+
+        const filtro = botao.getAttribute("data-filter");
+
+        cards.forEach(card => {
+            const categoria = card.getAttribute("data-categoria");
+
+            if (filtro === "todos" || filtro === categoria) {
+                card.classList.remove("oculto");
+            } else {
+                card.classList.add("oculto");
+            }
+        });
     });
-}
+});
+
+
+/* Seção Contato (Formulário) */
 
 formulario.addEventListener("submit", function(event){
     //Impede que o formulário seja automaticamente enviado (fará primeiro as validações)

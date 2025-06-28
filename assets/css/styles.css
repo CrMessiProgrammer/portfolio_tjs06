@@ -171,6 +171,20 @@ button, a{
     margin: 0 0 2vh 0;
 }
 
+.fonte_vscode {
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+#myname_home {
+    font-size: 2rem;
+}
+
+#typing-text {
+  border-right: 2px solid #00ffcc;
+  display: inline-block;
+  padding-right: 5px;
+}
+
 
 /* Estilização da Seção Home - Página Sucess */
 
@@ -240,6 +254,7 @@ button, a{
 #sobre_texto {
     margin-left: 2rem;
 }
+
 
 /* Estilização da Seção Habilidades */
 
@@ -320,60 +335,132 @@ button, a{
 
 /* Estilização da Seção Projetos */
 
-.projects_container{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-    max-width: 1120px;
-    margin: 4rem auto 2rem;
-    padding: 0 2rem;
-}
-
-#projects {
-    padding: 40px;
+.projetos {
+    padding: 40px 20px;
     text-align: center;
 }
 
-.filtros button {
-    margin: 5px;
-    padding: 10px 20px;
-    background: #7b2ff7;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 8px;
+.projetos h2 {
+    font-size: 2.5rem;
+    color: #bb44ff;
+    margin-bottom: 20px;
 }
 
-.cards {
+.filtros {
+    margin-bottom: 30px;
+}
+
+.filtros button {
+    background: none;
+    color: #ccc;
+    border: 1px solid #444;
+    margin: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.filtros .ativo,
+.filtros button:hover {
+    background: #bb44ff;
+    color: white;
+    border-color: #bb44ff;
+}
+
+.cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 30px;
 }
 
 .card {
-    background: #1e1e1e;
-    padding: 15px;
-    border-radius: 10px;
     width: 250px;
-    box-shadow: 0 0 10px #00000080;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card img {
     width: 100%;
-    border-radius: 6px;
+    height: 160px;
+    object-fit: cover;
 }
 
-.tecnologias span {
-    background: #7b2ff7;
+.card:hover {
+    transform: scale(1.07);
+}
+
+.card .info {
+    padding: 15px;
+    text-align: left;
+}
+
+.card .tipo {
+    font-size: 0.85rem;
+    color: #bb44ff;
+    margin-bottom: 5px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.card .data {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.techs {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.techs span {
+    font-size: 0.8rem;
     color: #fff;
-    padding: 3px 8px;
-    margin: 2px;
-    border-radius: 4px;
-    display: inline-block;
+    background: #333;
+    padding: 4px 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.oculto {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-icons img {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.12);
 }
 
 

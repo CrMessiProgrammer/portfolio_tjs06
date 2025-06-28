@@ -54,11 +54,15 @@
             <!-- Texto da Seção Home -->
             <article id="home_texto" class="flex home_content">
 
-                <h4>Bem-Vindo ao Meu Universo</h4>
-                <h1>🚧Desenvolvedor Full Stack🚧</h1>
-                <p>Aqui você encontrará um pouco sobre mim, minha trajetória na tecnologia e os projetos que desenvolvi ao longo do tempo. Sou apaixonado por programação e estou sempre buscando novas formas de aprender, evoluir e criar soluções inovadoras.
+                <h4 class="fonte_vscode">
+                    console.log("<span id="typing-text"></span>");
+                </h4>
+                <h1>🧑🏻‍💻Desenvolvedor Full Stack🧑🏻‍💻</h1>
+                <p>
+                    Aqui você encontrará um pouco sobre mim, minha trajetória na tecnologia e os projetos que desenvolvi ao longo do tempo. Sou apaixonado por programação e estou sempre buscando novas formas de aprender, evoluir e criar soluções inovadoras.
 
-                    Fique à vontade para explorar e conhecer mais sobre meu trabalho. Se quiser conectar-se, será um prazer!🫱🏽‍🫲🏽</p>
+                    Fique à vontade para explorar e conhecer mais sobre meu trabalho. Se quiser conectar-se, será um prazer!🫱🏽‍🫲🏽
+                </p>
                 <a href="https://github.com/CrMessiProgrammer" target="_blank" class="botao">
                     Explorar
                 </a>
@@ -67,7 +71,7 @@
 
             <!-- Imagem da Seção Home -->
             <article id="home_imagem" class="flex home_content">
-                <img src="./assets/img/img_home.svg" alt="Capacete de Astronauta Animado">
+                <img src="./assets/img/hacker-operando-uma-ilustracao-do-icone-dos-desenhos-animados-laptop-conceito-de-icone-de-tecnologia.svg" alt="Animação">
             </article>
         </section>
 
@@ -92,7 +96,9 @@
                     <div class="skill-item"><img src="assets/img/icons8-mysql.svg" alt="MySQL"><span>MySQL</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-postgreesql.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-sqlite.svg" alt="SQLite"><span>SQLite</span></div>
+                    <div class="skill-item"><img src="assets/img/mongodb-color.svg" alt="MongoDB"><span>MongoDB</span></div>
                     <div class="skill-item"><img src="assets/img/typeorm-color.svg" alt="TypeORM"><span>TypeORM</span></div>
+                    <div class="skill-item"><img src="assets/img/mongoose-color.svg" alt="Mongoose"><span>Mongoose</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-jwt.svg" alt="JWT"><span>JWT</span></div>
                     <div class="skill-item"><img src="assets/img/passport-color.svg" alt="Passport"><span>Passport</span></div>
                     <div class="skill-item"><img src="assets/img/encryption.svg" alt="Bcrypt"><span>Bcrypt</span></div>
@@ -115,6 +121,7 @@
                     <div class="skill-item"><img src="assets/img/icons8-git.svg" alt="Git"><span>Git</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-github.svg" alt="GitHub"><span>GitHub</span></div>
                     <div class="skill-item"><img src="assets/img/insomnia-color.svg" alt="Insomnia"><span>Insomnia</span></div>
+                    <div class="skill-item"><img src="assets/img/postman-color.svg" alt="Postman"><span>Postman</span></div>
 
                     <div class="skill-item"><img src="assets/img/render-color.svg" alt="Render"><span>Render</span></div>
                     <div class="skill-item"><img src="assets/img/netlify-color.svg" alt="Netlify"><span>Netlify</span></div>
@@ -139,7 +146,9 @@
                     <div class="skill-item"><img src="assets/img/icons8-mysql.svg" alt="MySQL"><span>MySQL</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-postgreesql.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-sqlite.svg" alt="SQLite"><span>SQLite</span></div>
+                    <div class="skill-item"><img src="assets/img/mongodb-color.svg" alt="MongoDB"><span>MongoDB</span></div>
                     <div class="skill-item"><img src="assets/img/typeorm-color.svg" alt="TypeORM"><span>TypeORM</span></div>
+                    <div class="skill-item"><img src="assets/img/mongoose-color.svg" alt="Mongoose"><span>Mongoose</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-jwt.svg" alt="JWT"><span>JWT</span></div>
                     <div class="skill-item"><img src="assets/img/passport-color.svg" alt="Passport"><span>Passport</span></div>
                     <div class="skill-item"><img src="assets/img/encryption.svg" alt="Bcrypt"><span>Bcrypt</span></div>
@@ -162,6 +171,7 @@
                     <div class="skill-item"><img src="assets/img/icons8-git.svg" alt="Git"><span>Git</span></div>
                     <div class="skill-item"><img src="assets/img/icons8-github.svg" alt="GitHub"><span>GitHub</span></div>
                     <div class="skill-item"><img src="assets/img/insomnia-color.svg" alt="Insomnia"><span>Insomnia</span></div>
+                    <div class="skill-item"><img src="assets/img/postman-color.svg" alt="Postman"><span>Postman</span></div>
 
                     <div class="skill-item"><img src="assets/img/render-color.svg" alt="Render"><span>Render</span></div>
                     <div class="skill-item"><img src="assets/img/netlify-color.svg" alt="Netlify"><span>Netlify</span></div>
@@ -178,35 +188,67 @@
         </section>
 
         <!-- Seção Projetos -->
-        <section id="projects" class="projects_container">
+        <section id="projects" class="projetos">
             <h2>Projetos</h2>
             <div class="filtros">
-                <button onclick="filterProjects('todos')">Todos</button>
-                <button onclick="filterProjects('web')">Aplicativos Web</button>
-                <button onclick="filterProjects('mobile')">Aplicativos Mobile</button>
-                <button onclick="filterProjects('desktop')">Aplicativos Desktop</button>
+                <button class="ativo" data-filter="todos">Todos</button>
+                <button data-filter="web">Aplicativos Web</button>
+                <button data-filter="mobile">Aplicativos Mobile</button>
+                <button data-filter="desktop">Aplicativos Desktop</button>
             </div>
 
-            <div class="cards">
+            <div class="cards-container">
+                <div class="card" data-categoria="desktop">
+                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Emerson do Frete" />
+                    <div class="info">
+                        <p class="tipo">Design</p>
+                        <h3>Emerson do Frete</h3>
+                        <div class="tech-icons">
+                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
+                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
+                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card" data-categoria="web">
-                    <img src="teste.png" alt="Projeto Teste" />
-                    <h3>Projeto Teste</h3>
-                    <p>Aplicativo de fretes para leilões</p>
-                    <div class="tecnologias">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Info Dogs" />
+                    <div class="info">
+                        <p class="tipo">Aplicativo Web</p>
+                        <h3>Info Dogs</h3>
+                        <div class="tech-icons">
+                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
+                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
+                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
+                        </div>
                     </div>
                 </div>
 
                 <div class="card" data-categoria="mobile">
-                    <img src="app-clima.png" alt="App Clima" />
-                    <h3>App Clima</h3>
-                    <p>Consulta de clima em tempo real</p>
-                    <div class="tecnologias">
-                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="App de Clima" />
+                    <div class="info">
+                        <p class="tipo">Aplicativo Mobile</p>
+                        <h3>Clima</h3>
+                        <div class="tech-icons">
+                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
+                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
+                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
+                        </div>
                     </div>
                 </div>
 
-            <!-- Adicionar mais cards aqui -->
+                <div class="card" data-categoria="mobile">
+                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Bateria Virtual" />
+                    <div class="info">
+                        <p class="tipo">Aplicativo Mobile</p>
+                        <h3>Bateria Virtual</h3>
+                        <div class="tech-icons">
+                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
+                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
+                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
