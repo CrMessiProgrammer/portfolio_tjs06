@@ -30,61 +30,20 @@ function type() {
 type();
 
 
-/* Seção Sobre (Texto + Import do Perfil do GitHub) */
+/* Seção Sobre (Import do Perfil do GitHub) */
 
-const sobre = document.querySelector("#about");
-const formulario = document.querySelector("#formulario");
-// Padrão de validação de e-mail
-const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const username = "CrMessiProgrammer";
 
-async function getApiGithub() {
-    try {
-
-        // 'fetch' faz as requisições HTTP
-        // Mandará uma requisição para esse endereço (github)
-        const dadosPerfil = await fetch(`https://api.github.com/users/CrMessiProgrammer`);
-
-        // Convertendo para 'json'
-        const perfil = await dadosPerfil.json();
-
-        let conteudo = `
-        
-            <!-- Imagem da Seção Sobre -->
-            <img src="${perfil.avatar_url}" alt="Foto do Perfil do Github - ${perfil.name}">
-
-            <!-- Texto da Seção Sobre -->
-            <article id="about_texto">
-                <h2>Sobre mim</h2>
-                <p style="text-align: left;">Olá, sou o Carlos Henrique Nunes, formado em Engenharia de Computação e atualmente focado na especialização no Desenvolvimento de Software.<br>
-
-                Minha paixão por tecnologia começou cedo, vendo meu pai consertar computadores. Esse interesse me levou ao CEAP, onde fiz meus primeiros cursos e me formei em Redes de Computadores, conquistando o certificado CISCO — um marco na minha trajetória.<br>
-
-                Na faculdade, descobri minha vocação: criar soluções com impacto social, unindo Java, Android, Arduino, Firebase e MySQL para promover acessibilidade.<br>
-
-                Na minha primeira experiência profissional como Jovem Aprendiz na Orion Integração, atuei com Suporte e Infraestrutura e aprimorei minha comunicação e gestão de tempo.<br>
-
-                Tenho investido continuamente em capacitações, eventos e cursos. Recentemente, me formei no Bootcamp da Generation em Desenvolvimento Fullstack - JavaScript, com foco em tecnologias como TypeScript, Node.js, NestJS, ReactJS, SQL (MySQL, PostgreSQL).<br>
-
-                Busco criar soluções que gerem impacto real na vida das pessoas. Neste portfólio, compartilho meus projetos e experiências. Fique à vontade para entrar em contato — será um prazer trocar ideias! Obrigado!😊</p>
-
-                <!-- Detalhes do Github -->
-                <div id="about_github" class="flex sobre_github">
-                    <a href="${perfil.html_url}" target="_blank" class="botao">
-                        Github
-                    </a>
-                    <p>${perfil.followers} Seguidores</p>
-                    <p>${perfil.public_repos} Repositórios</p>
-                </div>
-
-            </article>
-        `;
-
-            sobre.innerHTML += conteudo;
-        
-    } catch (error) {
-        console.log(error);
-    }    
-}
+fetch(`https://api.github.com/users/${username}`)
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("followers").textContent = data.followers;
+        document.getElementById("repos").textContent = data.public_repos;
+    })
+    .catch(err => {
+        document.getElementById("followers").textContent = "N/A";
+        document.getElementById("repos").textContent = "N/A";
+    });
 
 
 /* Seção Projetos (Filtragem dos botões) */
