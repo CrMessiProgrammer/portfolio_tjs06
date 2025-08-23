@@ -71,6 +71,29 @@ botoes.forEach(botao => {
 });
 
 
+/* Seção Eventos (Filtragem dos botões) */
+
+function filtrarExperiencias(tipo) {
+    const cards = document.querySelectorAll('.card-exp');
+    const botoes = document.querySelectorAll('.filtros-exp button');
+
+    botoes.forEach(btn => btn.classList.remove('ativo'));
+    event.target.classList.add('ativo');
+
+    cards.forEach(card => {
+        if (tipo === 'todos' || card.dataset.tipo === tipo) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Centraliza os cards filtrados
+    const container = document.querySelector('.cards-exp');
+    container.style.justifyContent = 'center';
+}
+
+
 /* Seção Contato (Formulário) */
 
 formulario.addEventListener("submit", function(event){

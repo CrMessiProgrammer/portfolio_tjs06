@@ -39,6 +39,7 @@
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#skills">Habilidades</a></li>
                         <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#events">Eventos</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
@@ -85,7 +86,7 @@
                     <h1>Carlos Henrique Nunes</h1>
                     <h3>Desenvolvedor Full Stack - JavaScript</h3>
                     <p>
-                        Sou um desenvolvedor movido por desafios e apaixonado por soluções que geram impacto. Atuo com JavaScript, utilizando Node.js (NestJS) no backend e ReactJS no frontend, focando em aplicações robustas e escaláveis. Acredito na colaboração, no aprendizado contínuo e na tecnologia como motor de transformação.
+                        Sou um desenvolvedor movido por desafios e apaixonado por soluções que geram impacto real. Atuo com JavaScript, utilizando Node.js (NestJS) no backend e ReactJS no frontend, focando em aplicações robustas e escaláveis. Acredito na colaboração, no aprendizado contínuo e na tecnologia como motor de transformação.
                     </p>
                     <div class="github-stats">
                         <div class="stat-card tooltip-card">
@@ -244,7 +245,7 @@
                 <div class="card" data-categoria="desktop">
                     <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Emerson do Frete" />
                     <div class="info">
-                        <p class="tipo">Design</p>
+                        <p class="tipo">Aplicativo Desktop</p>
                         <h3>Emerson do Frete</h3>
                         <div class="tech-icons">
                             <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
@@ -294,6 +295,183 @@
                 </div>
             </div>
         </section>
+
+        <!-- Seção Eventos (Atividades Extracurriculares) -->
+        <section class="experiencias">
+            <h2 class="titulo-sec">Experiências & Participações</h2>
+
+            <!-- Filtros -->
+            <div class="filtros-exp">
+                <button class="ativo" onclick="filtrarExperiencias('todos')">Todos</button>
+                <button onclick="filtrarExperiencias('workshops-palestras')">Workshops & Palestras</button>
+                <button onclick="filtrarExperiencias('formaturas')">Formações</button>
+                <button onclick="filtrarExperiencias('feiras-eventos')">Feiras & Eventos</button>
+                <button onclick="filtrarExperiencias('conferencias')">Conferências</button>
+                <button onclick="filtrarExperiencias('voluntariado-grupos')">Voluntariado & Grupos</button>
+            </div>
+
+            <!-- Cards -->
+            <div class="cards-experiencias">
+
+                <div class="card-exp" data-tipo="formaturas">
+                    <div class="img-container">
+                        <img src="assets/img/formatura_unip.jpeg" alt="Formatura UNIP" />
+                        <span class="tag">Formatura</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Engenharia de Computação (Bacharelado) • UNIP</h3>
+                        <p>Colação de grau celebrando 5 anos de aprendizado, projetos acadêmicos e desenvolvimento profissional.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="formaturas">
+                    <div class="img-container">
+                        <img src="assets/img/formatura_bootcamp.png" alt="Formatura Bootcamp - Generation Brasil" />
+                        <span class="tag">Formatura</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Desenvolvedor Full Stack JavaScript • Generation Brasil</h3>
+                        <p>Formatura remota do bootcamp, concluindo 4 meses de aprendizado prático em desenvolvimento full stack.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="formaturas">
+                    <div class="img-container">
+                        <img src="assets/img/formatura_ceap.jpeg" alt="Formatura CEAP" />
+                        <span class="tag">Formatura</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Técnico em Redes de Computadores • CEAP</h3>
+                        <p>Conquista do diploma técnico após anos de estudo em redes, infraestrutura e segurança da informação.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="feiras-eventos">
+                    <div class="img-container">
+                        <img src="assets/img/feira_empregabilidade.jpeg" alt="Feira de Empregabilidade - Generation Day" />
+                        <span class="tag">Feira de Tecnologia</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Feira de Empregabilidade • Generation Day</h3>
+                        <p>Apresentação do projeto final do bootcamp para empresas parceiras, com muito networking e oportunidades.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="feiras-eventos">
+                    <div class="img-container">
+                        <img src="assets/img/feira_tcc(unip).jpeg" alt="Feira de Apresentação TCC (UNIP)" />
+                        <span class="tag">Evento Acadêmico</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Apresentação TCC • UNIP</h3>
+                        <p>Defesa do TCC para banca avaliadora, recebendo feedbacks positivos e incentivo da coordenadora do curso a dar continuidade ao projeto.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="feiras-eventos">
+                    <div class="img-container">
+                        <img src="assets/img/feira_feceap.jpeg" alt="Feira de Tecnologia - CEAP" />
+                        <span class="tag">Feira de Tecnologia</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Feira Tech • FECEAP</h3>
+                        <p>Apresentação do projeto de carrinho controlado via Bluetooth em evento aberto ao público e avaliadores, com diversas interações.</p>
+                    </div>
+                </div>
+                
+                <div class="card-exp" data-tipo="feiras-eventos">
+                    <div class="img-container">
+                        <img src="assets/img/feira_ceap.jpeg" alt="Feira (Jornada Humanística) - CEAP" />
+                        <span class="tag">Feira de Tecnologia</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Jornada Humanística • CEAP</h3>
+                        <p>Minhas primeiras apresentações técnicas de projetos, em um evento interno de inovação e tecnologia do CEAP.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="feiras-eventos">
+                    <div class="img-container">
+                        <img src="assets/img/feiraTec_ceap.jpeg" alt="Feira (Jornada Humanística) - CEAP" />
+                        <span class="tag">Feira de Tecnologia</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Feira Tech • FECEAP</h3>
+                        <p>Participação como espectador para prestigiar os alunos e acompanhar as inovações, incluindo a apresentação do meu irmão.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="conferencias">
+                    <div class="img-container">
+                        <img src="assets/img/conferencia_fundacaoEstudar.jpeg" alt="Conferência Fundação Estudar" />
+                        <span class="tag">Conferência</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Gestão & Inovação • Fundação Estudar</h3>
+                        <p>Interações com empresas e líderes, além de painéis sobre sustentabilidade, inovação aberta e colaboração.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="workshops-palestras">
+                    <div class="img-container">
+                        <img src="assets/img/workshop_fundacaoEstudar.jpeg" alt="Workshop Soft Skills" />
+                        <span class="tag">Workshop</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Soft Skills + Networking • Fundação Estudar</h3>
+                        <p>Workshop de preparação para o mercado, com foco em soft skills e networking com profissionais e colegas.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="workshops-palestras">
+                    <div class="img-container">
+                        <img src="assets/img/workshop_PageGroup.png" alt="Workshop Soft Skills" />
+                        <span class="tag">Workshop</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Soft Skills no Mercado de Trabalho • Page Group</h3>
+                        <p>Workshop promovido pela Page Group, com dicas práticas sobre entrevistas, networking e progressão de carreira.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="workshops-palestras">
+                    <div class="img-container">
+                        <img src="assets/img/palestra(simpósio)_SQLServercommunityopenhang-out.jpg" alt="Workshop Soft Skills" />
+                        <span class="tag">Palestra</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>SQL Server Community Open Hang-Out</h3>
+                        <p>Palestra internacional sobre SQL Server, marcando uma das primeiras experiências em eventos em inglês.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="voluntariado-grupos">
+                    <div class="img-container">
+                        <img src="assets/img/voluntariado_QaCodersAcademy.png" alt="Grupo de Estudo - HackerRank" />
+                        <span class="tag">Voluntariado</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Desenvolvedor Back-End • QaCoders Academy</h3>
+                        <p>Atuação como voluntário em projetos reais, desenvolvendo soluções back-end e colaborando em equipe com práticas ágeis.</p>
+                    </div>
+                </div>
+
+                <div class="card-exp" data-tipo="voluntariado-grupos">
+                    <div class="img-container">
+                        <img src="assets/img/grupo_estudo.png" alt="Grupo de Estudo - HackerRank" />
+                        <span class="tag">Grupo de Estudo</span>
+                    </div>
+                    <div class="conteudo-card">
+                        <h3>Exercise Resolutions • HackerRank Platform</h3>
+                        <p>Grupo de estudos para resolução de desafios de lógica e algoritmos, com apresentações e trocas de conhecimento entre os participantes.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+
 
         <!-- Seção de Contato -->
         <section id="contact" class="contato_container">
