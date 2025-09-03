@@ -96,6 +96,10 @@ function filtrarExperiencias(tipo) {
 
 /* Seção Contato (Formulário) */
 
+const formulario = document.querySelector("#formulario");
+// Padrão de validação de e-mail
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
 formulario.addEventListener("submit", function(event){
     //Impede que o formulário seja automaticamente enviado (fará primeiro as validações)
     event.preventDefault();
