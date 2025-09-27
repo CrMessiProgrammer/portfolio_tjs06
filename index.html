@@ -233,68 +233,118 @@
 
         <!-- Seção Projetos -->
         <section id="projects" class="projetos">
-            <h2>Projetos</h2>
-            <div class="filtros">
-                <button class="ativo" data-filter="todos">Todos</button>
-                <button data-filter="web">Aplicativos Web</button>
-                <button data-filter="mobile">Aplicativos Mobile</button>
-                <button data-filter="desktop">Aplicativos Desktop</button>
+            <h2 class="projetos-title">Projetos</h2>
+
+            <!-- filtros -->
+            <div class="filtros" role="tablist" aria-label="Filtrar projetos">
+                <button class="ativo" data-filter="todos" aria-pressed="true">Todos</button>
+                <button data-filter="frontend">Front-End</button>
+                <button data-filter="backend">Back-End</button>
+                <button data-filter="fullstack">Full-Stack</button>
             </div>
 
-            <div class="cards-container">
-                <div class="card" data-categoria="desktop">
-                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Emerson do Frete" />
-                    <div class="info">
-                        <p class="tipo">Aplicativo Desktop</p>
-                        <h3>Emerson do Frete</h3>
-                        <div class="tech-icons">
-                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
-                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
-                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
-                        </div>
-                    </div>
+            <!-- cards -->
+            <div class="cards-container" id="projectsCards">
+                <!-- Card 1 -->
+                <article class="card" tabindex="0"
+                        data-categoria="frontend"
+                        data-title="Emerson do Frete"
+                        data-desc="Aplicativo desktop para gerenciamento de fretes com autenticação e painel administrativo."
+                        data-link="https://github.com/SEU_GITHUB/EmersonFrete">
+                <div class="card-media">
+                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Emerson do Frete"/>
+                    <span class="tag desktop"><img src="assets/img/devices.svg" alt="Desktop" title="Desktop"/></span>
                 </div>
 
-                <div class="card" data-categoria="web">
-                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Info Dogs" />
-                    <div class="info">
-                        <p class="tipo">Aplicativo Web</p>
-                        <h3>Info Dogs</h3>
-                        <div class="tech-icons">
-                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
-                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
-                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
-                        </div>
+                <div class="info">
+                    <div class="info-top">
+                    <p class="tipo">Aplicativo Desktop</p>
+                    <h3>Emerson do Frete</h3>
+                    <p class="descricao">Sistema para gestão de fretes, cadastro de rotas e controle de entregas.</p>
                     </div>
+
+                    <div class="card-footer">
+                    <div class="tech-icons">
+                        <img src="assets/img/react-color.svg" alt="React" title="React"/>
+                        <img src="assets/img/icons8-nó-js (1).svg" alt="Node.js" title="Node.js"/>
+                        <img src="assets/img/mongodb-color.svg" alt="MongoDB" title="MongoDB"/>
+                    </div>
+                    <button class="saiba-mais" aria-label="Saiba mais sobre Emerson do Frete">Saiba mais →</button>
+                    </div>
+                </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card" tabindex="0"
+                        data-categoria="backend"
+                        data-title="Info Dogs"
+                        data-desc="API REST e front para consulta de raças, com integração a terceiros."
+                        data-link="https://github.com/SEU_GITHUB/InfoDogs">
+                <div class="card-media">
+                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Info Dogs"/>
+                    <span class="tag web"><img src="assets/img/globe.svg" alt="Web" title="Web"/></span>
                 </div>
 
-                <div class="card" data-categoria="mobile">
-                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="App de Clima" />
-                    <div class="info">
-                        <p class="tipo">Aplicativo Mobile</p>
-                        <h3>Clima</h3>
-                        <div class="tech-icons">
-                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
-                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
-                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
-                        </div>
+                <div class="info">
+                    <div class="info-top">
+                    <p class="tipo">Aplicativo Web</p>
+                    <h3>Info Dogs</h3>
+                    <p class="descricao">Aplicação para pesquisar raças e dados usando APIs públicas.</p>
                     </div>
+
+                    <div class="card-footer">
+                    <div class="tech-icons">
+                        <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
+                        <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
+                        <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
+                    </div>
+                    <button class="saiba-mais" aria-label="Saiba mais sobre Info Dogs">Saiba mais →</button>
+                    </div>
+                </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card" tabindex="0"
+                        data-categoria="fullstack"
+                        data-title="Delivery Cats"
+                        data-desc="App mobile para delivery de rações, com geolocalização e notificações."
+                        data-link="https://github.com/SEU_GITHUB/DeliveryCats">
+                <div class="card-media">
+                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Delivery Cats"/>
+                    <span class="tag mobile"><img src="assets/img/device-mobile.svg" alt="Mobile" title="Mobile"/></span>
                 </div>
 
-                <div class="card" data-categoria="mobile">
-                    <img src="assets/img/social-media-marketing-concept-marketing-with-applications (8).jpg" alt="Bateria Virtual" />
-                    <div class="info">
-                        <p class="tipo">Aplicativo Mobile</p>
-                        <h3>Bateria Virtual</h3>
-                        <div class="tech-icons">
-                            <img src="assets/img/icons8-html.svg" alt="HTML5" title="HTML5"/>
-                            <img src="assets/img/icons8-css3.svg" alt="CSS3" title="CSS3"/>
-                            <img src="assets/img/icons8-javascript.svg" alt="JavaScript" title="JavaScript"/>
-                        </div>
+                <div class="info">
+                    <div class="info-top">
+                    <p class="tipo">Aplicativo Mobile</p>
+                    <h3>Delivery Cats</h3>
+                    <p class="descricao">App para pedidos e rastreamento, com integração Firebase e pagamentos.</p>
+                    </div>
+
+                    <div class="card-footer">
+                    <div class="tech-icons">
+                        <img src="assets/img/icons8-logo-java-coffee-cup (1).svg" alt="Java" title="Java"/>
+                        <img src="assets/img/xml-color.svg" alt="XML" title="XML"/>
+                        <img src="assets/img/icons8-firebase.svg" alt="Firebase" title="Firebase"/>
+                    </div>
+                    <button class="saiba-mais" aria-label="Saiba mais sobre Delivery Cats">Saiba mais →</button>
                     </div>
                 </div>
+                </article>
+
+                <!-- adicione mais cards seguindo o padrão acima -->
             </div>
         </section>
+
+        <!-- Modal -->
+        <div id="modal" class="modal oculto" aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                <button id="closeModal" class="modal-close" aria-label="Fechar">&times;</button>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+                <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="modal-cta">🔗 Ver no GitHub</a>
+            </div>
+        </div>
 
         <!-- Seção Eventos (Atividades Extracurriculares) -->
         <section id="events" class="experiencias">

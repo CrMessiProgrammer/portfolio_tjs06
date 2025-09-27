@@ -48,26 +48,108 @@ fetch(`https://api.github.com/users/${username}`)
 
 /* Seção Projetos (Filtragem dos botões) */
 
-const botoes = document.querySelectorAll(".filtros button");
-const cards = document.querySelectorAll(".card");
+document.addEventListener('DOMContentLoaded', () => {
+    const projectsRoot = document.getElementById('projects');
+    if (!projectsRoot) return;
 
-botoes.forEach(botao => {
-    botao.addEventListener("click", () => {
-        document.querySelector(".filtros .ativo").classList.remove("ativo");
-        botao.classList.add("ativo");
+    const filterButtons = projectsRoot.querySelectorAll('.filtros button');
+    const projectCards = projectsRoot.querySelectorAll('.card');
 
-        const filtro = botao.getAttribute("data-filter");
+    // hide/show com animação (fade -> display none)
+    function hideCard(card) {
+        if (card.classList.contains('removed')) return;
+        card.classList.add('fading');
+        const onEnd = (e) => {
+          if (e.propertyName === 'opacity') {
+            card.classList.add('removed');
+            card.removeEventListener('transitionend', onEnd);
+          }
+        };
+        card.addEventListener('transitionend', onEnd);
+    }
 
-        cards.forEach(card => {
-            const categoria = card.getAttribute("data-categoria");
+    function showCard(card) {
+        if (card.classList.contains('removed')) {
+          card.classList.remove('removed');
+          // força reflow para garantir transição
+          void card.offsetWidth;
+        }
+        card.classList.remove('fading');
+    }
 
-            if (filtro === "todos" || filtro === categoria) {
-                card.classList.remove("oculto");
-            } else {
-                card.classList.add("oculto");
-            }
+    // filtros (aceita data-filter ou data-filtro)
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const current = projectsRoot.querySelector('.filtros .ativo');
+          if (current) current.classList.remove('ativo');
+          btn.classList.add('ativo');
+
+          const filter = btn.dataset.filter ?? btn.dataset.filtro ?? 'todos';
+          projectCards.forEach(card => {
+            const cat = card.dataset.categoria;
+            if (filter === 'todos' || filter === cat) showCard(card);
+            else hideCard(card);
+          });
         });
     });
+
+    // Modal
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalLink = document.getElementById('modalLink');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    function openModal(title, desc, link) {
+        modalTitle.textContent = title || 'Projeto';
+        modalDesc.textContent = desc || '';
+        modalLink.href = link || '#';
+        modal.classList.remove('oculto');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.add('oculto');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    // abrir modal ao clicar no card ou no botão "saiba-mais"
+    projectCards.forEach(card => {
+        // clicar no card inteiro
+        card.addEventListener('click', (e) => {
+          const title = card.dataset.title;
+          const desc = card.dataset.desc;
+          const link = card.dataset.link;
+          openModal(title, desc, link);
+        });
+
+        // teclado (Enter / Space)
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+
+        // clicar no botão "saiba mais" (delegado)
+        const cta = card.querySelector('.saiba-mais');
+        if (cta) {
+          cta.addEventListener('click', (ev) => {
+            ev.stopPropagation(); // evita re-click duplo
+            const title = card.dataset.title;
+            const desc = card.dataset.desc;
+            const link = card.dataset.link;
+            openModal(title, desc, link);
+          });
+        }
+    });
+
+    // fechar
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.classList.contains('oculto')) closeModal(); });
 });
 
 
